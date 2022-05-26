@@ -26,7 +26,7 @@ stage('Build') {
             echo 'FAILURE'
         }
 		aborted{
-			echo 'ABORTED MANUALLY'
+			echo 'ABORTED BY ME MANUALLY'
 		}
     }
   
