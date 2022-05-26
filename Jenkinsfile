@@ -18,6 +18,17 @@ stage('Build') {
   		}
 
   }
+  post { 
+        success { 
+            echo 'SUCCESSFUL'
+        }
+		 failure { 
+            echo 'FAILURE'
+        }
+		aborted{
+			echo 'ABORTED MANUALLY'
+		}
+    }
   
    
 }
