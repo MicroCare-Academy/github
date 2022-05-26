@@ -12,8 +12,8 @@ pipeline {
   		
 stage('Build') {
     		steps {
-      			// Run the maven build
-      			sh 'mvn clean23 compile23 -DskipTests'
+      			// Run the maven build check extra
+      			sh 'mvn clean compile'
     		}
   		}
 
