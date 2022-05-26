@@ -1,11 +1,7 @@
 pipeline {
 
    agent any
-   
-
-   
-
-  	stages{
+   stages{
 
    		stage('Checkout') { // for display purposes
     		steps {
@@ -14,12 +10,7 @@ pipeline {
     		}
   		}
   		
-  		
-		
-   
-  		
-     
-  		stage('Build') {
+stage('Build') {
     		steps {
       			// Run the maven build
       			sh 'mvn clean compile -DskipTests'
