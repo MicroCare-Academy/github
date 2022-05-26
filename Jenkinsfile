@@ -13,7 +13,7 @@ pipeline {
 stage('Build') {
     		steps {
       			// Run the maven build check extra
-      			sh 'mvn clean compile'
+      			sh 'mvn clean234 compile'
     		}
   		}
 
