@@ -13,7 +13,7 @@ pipeline {
 stage('Build') {
     		steps {
       			// Run the maven build check extra
-      			 bat 'mvn clean compile'
+      			 bat 'C:\Users\quame\Downloads\apache-maven-3.8.5-bin\apache-maven-3.8.5\bin\mvn.exe clean compile'
     		}
   		}
 
