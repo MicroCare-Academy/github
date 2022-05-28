@@ -16,6 +16,12 @@ stage('Build') {
       			sh 'mvn clean compile'
     		}
   		}
+	   stage('Test') {
+    		steps {
+      			// Run the maven build check extra
+      			sh 'mvn test'
+    		}
+  		}
 
   }
   post { 
