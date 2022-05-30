@@ -47,9 +47,7 @@ stage('Build') {
 		aborted{
 			echo 'ABORTED BY ME MANUALLY'
 		}
-	  always{
-		  timestamps()
-	  }
+	 
     }
   
    
