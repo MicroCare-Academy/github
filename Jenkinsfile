@@ -1,6 +1,10 @@
 pipeline {
 
    agent any
+	  environment {
+
+    PATH_DIR = "/home/"
+  }
    stages{
 
    		stage('Checkout') { // for display purposes
@@ -20,6 +24,14 @@ stage('Build') {
     		steps {
       			// Run the maven build check extra
       			sh 'mvn test'
+    		}
+  		}
+	    stage('PATH') {
+    		steps {
+      			// Run the maven build check extra
+			sh 'pwd'
+      			sh 'cd $PATH_DIR'
+			sh 'pwd'
     		}
   		}
 
