@@ -43,6 +43,7 @@ stage('Build') {
 			sh 'pwd'
       			sh 'cd $PATH_DIR'
 			sh 'pwd'
+			 currentBuild.result = "UNSTABLE"
     		}
   		}
 
@@ -56,6 +57,9 @@ stage('Build') {
         }
 		aborted{
 			echo 'ABORTED BY ME MANUALLY'
+		}
+	  unstable{
+			echo 'UNSTABLE THROUGH PIPELINE STEPS'
 		}
 	 
     }
