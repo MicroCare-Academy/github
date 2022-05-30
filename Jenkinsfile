@@ -9,6 +9,7 @@ pipeline {
 
    		stage('Checkout') { // for display purposes
     		steps {
+			timestamps()
       			// this will checkout the branch/master based on the commit file
        			checkout scm
     		}
@@ -46,6 +47,9 @@ stage('Build') {
 		aborted{
 			echo 'ABORTED BY ME MANUALLY'
 		}
+	  always{
+		  timestamps()
+	  }
     }
   
    
