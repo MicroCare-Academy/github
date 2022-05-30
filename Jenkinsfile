@@ -30,6 +30,10 @@ stage('Build') {
     		}
   		}
 	   stage('Test') {
+		    when {
+        // skip this stage unless on Master branch
+        branch not "master"
+      }
     		steps {
       			// Run the maven build check extra
       			sh 'mvn test'
