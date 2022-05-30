@@ -43,7 +43,9 @@ stage('Build') {
 			sh 'pwd'
       			sh 'cd $PATH_DIR'
 			sh 'pwd'
+			script{
 			 currentBuild.result = "UNSTABLE"
+			}
     		}
   		}
 
