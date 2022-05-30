@@ -30,8 +30,7 @@ stage('Build') {
     		}
   		}
 	   stage('Test') {
-		    when {
-        branch  'master'
+		   when { not { branch  'master'}
       }
     		steps {
       			// Run the maven build check extra
