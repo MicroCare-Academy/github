@@ -6,15 +6,16 @@ pipeline {
     PATH_DIR = "/home/"
   }
 	options {
+		 buildDiscarder(logRotator(numToKeepStr:'5'))
 		timestamps()
-	 timeout(time: 1, unit: 'MINUTES')}
+	 timeout(time: 10, unit: 'MINUTES')}
    stages{
 
    		stage('Checkout') { // for display purposes
     		steps {
 			
       			// this will checkout the branch/master based on the commit file
-			sleep(120)
+			sleep(10)
        			checkout scm
     		}
   		}
