@@ -15,6 +15,7 @@ pipeline {
     		steps {
 			
       			// this will checkout the branch/master based on the commit file
+			echo 'THIS IS BUILD NUMBER $BUILD_NUMBER'
 			sleep(10)
        			checkout scm
     		}
