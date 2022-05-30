@@ -12,6 +12,7 @@ pipeline {
     		steps {
 			
       			// this will checkout the branch/master based on the commit file
+			sleep(10)
        			checkout scm
     		}
   		}
