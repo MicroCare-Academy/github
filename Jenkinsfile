@@ -5,14 +5,16 @@ pipeline {
 
     PATH_DIR = "/home/"
   }
-	options {timestamps()}
+	options {
+		timestamps()
+	 timeout(time: 1, unit: 'MINUTES')}
    stages{
 
    		stage('Checkout') { // for display purposes
     		steps {
 			
       			// this will checkout the branch/master based on the commit file
-			sleep(10)
+			sleep(120)
        			checkout scm
     		}
   		}
