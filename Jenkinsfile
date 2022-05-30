@@ -16,6 +16,7 @@ pipeline {
 			
       			// this will checkout the branch/master based on the commit file
 			sh 'echo "THIS IS BUILD NUMBER $BUILD_NUMBER"'
+			sh 'echo "Jenkins URL $JENKINS_URL"'
 			sleep(10)
        			checkout scm
     		}
