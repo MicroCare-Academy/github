@@ -9,7 +9,7 @@ pipeline {
 
    		stage('Checkout') { // for display purposes
     		steps {
-			timestamps()
+			options {timestamps()}
       			// this will checkout the branch/master based on the commit file
        			checkout scm
     		}
