@@ -1,6 +1,6 @@
 pipeline {
 
-   agent any
+   agent MICROCARE
 	  environment {
 
     PATH_DIR = "/home/"
